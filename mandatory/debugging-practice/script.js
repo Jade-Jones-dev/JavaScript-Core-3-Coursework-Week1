@@ -6,7 +6,7 @@ window.addEventListener("load", function (e) {
 });
 
 function populateStorage() {
-  if (myLibrary.length == 0) {
+  if (myLibrary.length === 0) {
     let book1 = new Book("Robison Crusoe", "Daniel Defoe", "252", true);
     let book2 = new Book(
       "The Old Man and the Sea",
@@ -29,16 +29,16 @@ const check = document.getElementById("check");
 //via Book function and start render function
 function submit() {
   if (
-    title.value == null ||
+  
     title.value == "" ||
-    pages.value == null ||
+    author.value == "" ||
     pages.value == ""
   ) {
     alert("Please fill all fields!");
     return false;
   } else {
-    let book = new Book(title.value, title.value, pages.value, check.checked);
-    library.push(book);
+    let book = new Book(title.value, author.value, pages.value, check.checked);
+    mylibrary.push(book);
     render();
   }
 }
